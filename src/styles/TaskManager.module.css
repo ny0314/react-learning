@@ -1,0 +1,48 @@
+.container {
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+}
+
+.inputContainer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.inputField {
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+.addButton {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.taskList {
+    list-style: none;
+    padding: 0;
+}
+
+.taskItem {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.taskText {
+    cursor: pointer;
+}
+
+.deleteButton {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
