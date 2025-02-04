@@ -3,12 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@hookform/resolvers": "^3.10.0",
+    "@reduxjs/toolkit": "^2.5.1",
     "axios": "^1.7.9",
     "cra-template-typescript": "1.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-hook-form": "^7.54.2",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^7.1.5",
     "react-scripts": "5.0.1",
-    "react-window": "^1.8.11"
+    "react-window": "^1.8.11",
+    "yup": "^1.6.1",
+    "zustand": "^5.0.3"
   },
   "scripts": {
     "start": "react-scripts start",
