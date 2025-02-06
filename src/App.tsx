@@ -1,28 +1,17 @@
-import React from "react";
-import { ThemeProvider, useTheme } from "./components/ThemeContext";
-
-const ThemeSwitcher: React.FC = () => {
-    const { theme, toggleTheme } = useTheme();
-    return (
-        <div
-            style={{
-                background: theme === "light" ? "#fff" : "#333",
-                color: theme === "light" ? "#000" : "#fff",
-                padding: "10px",
-            }}
-        >
-            <h2>useContext の例</h2>
-            <p>現在のテーマ: {theme}</p>
-            <button onClick={toggleTheme}>テーマを切り替え</button>
-        </div>
-    );
-};
+import React, { useState } from "react";
+import PostList from "./components/PostList";
+import PostForm from "./components/PostForm";
+import { Post } from "./types"; // Post 型をインポート
 
 const App: React.FC = () => {
+    const [newPost, setNewPost] = useState<Post | null>(null);
+
     return (
-        <ThemeProvider>
-            <ThemeSwitcher />
-        </ThemeProvider>
+        <div>
+            <h1>API 連携の学習</h1>
+            <PostForm onPostAdded={(post) => setNewPost(post)} />
+            <PostList newPost={newPost} />
+        </div>
     );
 };
 
