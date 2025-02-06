@@ -1,16 +1,17 @@
-import React, { useState } from "react";
-import PostList from "./components/PostList";
-import PostForm from "./components/PostForm";
-import { Post } from "./types"; // Post 型をインポート
+import React from "react";
+import ExpensiveCalculation from "./components/ExpensiveCalculation";
+import ParentComponent from "./components/ParentComponent";
+import WithoutUseMemo from "./components/WithoutUseMemo";
+import WithUseMemo from "./components/WithUseMemo";
 
 const App: React.FC = () => {
-    const [newPost, setNewPost] = useState<Post | null>(null);
-
     return (
         <div>
-            <h1>API 連携の学習</h1>
-            <PostForm onPostAdded={(post) => setNewPost(post)} />
-            <PostList newPost={newPost} />
+            <h1>パフォーマンス最適化（useMemo & React.memo）</h1>
+            {/* <ExpensiveCalculation /> */}
+            <ParentComponent />
+            {/* <WithoutUseMemo /> */}
+            {/* <WithUseMemo /> */}
         </div>
     );
 };
