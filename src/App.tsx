@@ -9,6 +9,8 @@ import TransitionExample from "./components/TransitionExample";
 import DeferredExample from "./components/DeferredExample";
 import SuspenseWrapper from "./components/SuspenseWrapper";
 import LazyWithTransition from "./components/LazyWithTransition";
+import ControlledForm from "./components/ControlledForm";
+import UncontrolledForm from "./components/UncontrolledForm";
 
 const App: React.FC = () => {
     return (
@@ -23,7 +25,10 @@ const App: React.FC = () => {
             {/* <TransitionExample /> */}
             {/* <DeferredExample /> */}
             {/* <SuspenseWrapper /> */}
-            <LazyWithTransition />
+            {/* <LazyWithTransition /> */}
+            <ControlledForm />
+            <hr />
+            <UncontrolledForm />
         </div>
     );
 };
